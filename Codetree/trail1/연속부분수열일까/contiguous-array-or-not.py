@@ -14,6 +14,6 @@ for i in range(a):
         print('Yes')
         break
     else:
-        if i+j==a-1:
+        if i==a-1:
             print('No')
             break
