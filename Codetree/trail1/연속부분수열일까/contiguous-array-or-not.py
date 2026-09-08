@@ -8,7 +8,8 @@ for i in range(a):
     cnt=True
     for j in range(b):        
         if arr1[i+j]!=arr2[j]:
-            cnt=False            
+            cnt=False
+            break            
     if cnt:
         print('Yes')
         break
