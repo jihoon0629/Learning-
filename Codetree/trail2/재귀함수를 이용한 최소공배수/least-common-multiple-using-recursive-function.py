@@ -13,11 +13,11 @@ def f(n,arr):
     else:
         target = arr[n-1]
         gbs = last_gbs
-        for i in range(1,n):
-            for i in range(2,gbs):
-                if gbs%i==0 and target%i==0:
-                    gbs//=i
-                    target//=i
-        return last_gbs * target
+        gys = 1
+        for i in range(gbs,1,-1):
+            if gbs % i == 0 and target % i == 0:
+                gys = i
+                break
+        return (last_gbs * target)//gys
         
 print(f(n,arr))
