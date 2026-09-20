@@ -4,8 +4,15 @@ class num:
         self.num = int(num)
 
 n = int(input())
-arr = list(map(int,input().split()))
-arr2 = sorted(arr)
-for elem in arr:
-    print(arr2.index(elem)+1,end=' ')
-    arr2[arr2.index(elem)] = -1
+arr = input().split()
+
+for i in range(n):
+    arr[i] = num(arr[i])
+
+arr2 = arr[:]
+arr2.sort(key = lambda x: x.i)
+for i in range(1,n+1):
+    arr2[i-1].num = i
+
+for i in arr:
+    print(i.num,end=' ')
