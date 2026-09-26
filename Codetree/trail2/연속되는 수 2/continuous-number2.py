@@ -2,14 +2,16 @@ n = int(input())
 arr = []
 for i in range(n):
     arr.append(int(input()))
-arr2 = []
+max_cnt = 0
 for i in range(n):
     if i==0:
         cnt=1
     elif arr[i] != arr[i-1]:
-        arr2.append(cnt)
+        if cnt > max_cnt:
+            max_cnt = cnt
         cnt=1
     elif arr[i] == arr[i-1]:
         cnt+=1
-arr2.append(cnt)
-print(max(arr2))
+if cnt > max_cnt:
+    max_cnt = cnt
+print(max_cnt)
