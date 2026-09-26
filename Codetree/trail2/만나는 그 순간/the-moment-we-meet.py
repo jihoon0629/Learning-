@@ -18,15 +18,10 @@ for i in range(m):
     b = int(b)
     f(a,b,b_move)
 
-if len(a_move) < len(b_move):
-    less = len(a_move)
-else:
-    less = len(b_move)
-exist = False
-for i in range(1,less):
+
+for i in range(1,len(a_move)):
     if a_move[i] == b_move[i]:
         print(i)
-        exist = True
         break
-if not exist:
+else:
     print(-1)
