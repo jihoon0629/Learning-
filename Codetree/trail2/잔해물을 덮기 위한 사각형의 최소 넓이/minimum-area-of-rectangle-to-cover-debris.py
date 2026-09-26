@@ -1,9 +1,7 @@
 def f(a,b,c,d,n):
-    for i in range(2001):
-        for j in range(2001):
-            if i>=a and i<c:
-                if j>=b and j<d:
-                    arr[i][j] = n
+    for i in range(a,c):
+        for j in range(b,d):  
+            arr[i][j] = n
     return arr
 
 arr = [[0 for _ in range(2001)] for _ in range(2001)]
