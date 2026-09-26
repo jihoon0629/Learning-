@@ -1,8 +1,7 @@
 def f(a,b,c,d,color):
-    for i in range(a+100,c+100):
-        for j in range(b+100,d+100):
-            arr[i][j] = color
-    return arr
+    for x in range(a+100,c+100):
+        for y in range(b+100,d+100):
+            arr[x][y] = color
 arr = [[None for _ in range(201)] for _ in range(201)]
 n = int(input())
 for i in range(n):
