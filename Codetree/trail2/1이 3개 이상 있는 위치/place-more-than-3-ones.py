@@ -1,7 +1,7 @@
-n = int(input())
 def in_range(x,y):
-    global n
     return x>=0 and x<n and y>=0 and y<n
+
+n = int(input())
 arr = [list(map(int,input().split())) for _ in range(n)]
 dx, dy = [1,0,-1,0], [0,-1,0,1]
 count = 0
