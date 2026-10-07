@@ -12,7 +12,5 @@ for i in range(n):
             if money-arr[j]>=0:
                 money-=arr[j]
                 cnt+=1
-            else:
-                continue
     max_cnt = max(max_cnt, cnt)
 print(max_cnt)
