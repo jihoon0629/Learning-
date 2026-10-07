@@ -23,7 +23,11 @@ for i in range(S):
         if p[j] == sick_man and t[j] < sick_time:
             av_arr.append(m[j])
     av_arr = set(av_arr)
-    new_arr = [k for k in new_arr if k in av_arr]
+    
+    for i in range(len(new_arr)-1,-1,-1):
+        if new_arr[i] not in av_arr:
+            new_arr.pop(i)
+
 
 max_count = 0
 for i in new_arr:
