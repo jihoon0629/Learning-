@@ -1,3 +1,4 @@
+import sys
 n = int(input())
 arr = list(map(int,input()))
 maxmin_dis = 0
@@ -7,8 +8,8 @@ for i in range(n):
             new_arr = arr[:]
             new_arr[i] = 1
             new_arr[j] = 1
-            min_dis = 10000
-            dis = 1000000
+            min_dis = sys.maxsize
+            dis = sys.maxsize
             for k in range(new_arr.index(1),n):
                 if new_arr[k] == 1:
                     dis+=1
