@@ -1,11 +1,9 @@
 n = int(input())
 segments = [tuple(map(int, input().split())) for _ in range(n)]
-x1, x2 = zip(*segments)
-x1, x2 = list(x1), list(x2)
 overlap = False
 for i in range(101):
-    for x,y in segments:
-        if x<=i<=y:
+    for x1,x2 in segments:
+        if x1<=i<=x2:
             continue
         else:
             break
