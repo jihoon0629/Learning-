@@ -4,7 +4,7 @@ x1, x2 = zip(*segments)
 x1, x2 = list(x1), list(x2)
 overlap = False
 for i in range(101):
-    for x,y in zip(x1,x2):
+    for x,y in segments:
         if x<=i<=y:
             continue
         else:
