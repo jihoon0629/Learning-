@@ -8,12 +8,9 @@ while True:
         break
     if dis >= sum(i for i in range(1,vel+1)) + vel + 1:
         vel += 1
-        time += 1
-        dis -= vel
     elif dis >= sum(i for i in range(1,vel+1)):
-        time += 1
-        dis -= vel
+        pass
     else:
-            time += 1
-            vel -= 1
-            dis-= vel
+        vel -= 1
+    time += 1
+    dis -= vel
