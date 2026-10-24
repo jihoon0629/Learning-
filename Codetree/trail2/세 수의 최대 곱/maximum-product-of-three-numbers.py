@@ -14,25 +14,26 @@ for i in range(n):
         break
 
 if plus >= 3:
-    plus_max = 1
+    plus_prod = 1
     arr2 = arr[:]
     for i in range(3):
-        plus_max *= arr2.pop(arr2.index(max(arr2)))
-    possible_max.append(plus_max)
+        plus_prod *= arr2.pop(arr2.index(max(arr2)))
+    possible_max.append(plus_prod)
 
 if minus >= 2 and plus >= 1:
     arr2 = arr[:]
-    minus_max = 1
+    minus_prod = 1
     for i in range(2):
-        minus_max *= arr2.pop(arr2.index(min(arr2)))
-    possible_max.append(minus_max * max(arr))
+        minus_prod *= arr2.pop(arr2.index(min(arr2)))
+    possible_max.append(minus_prod * max(arr))
 
 if plus == 0 and zero:
     possible_max.append(0)
 else:
-    arr_sum = 1
+    arr2 = arr[:]
+    neg_prod = 1
     for i in range(3):
-        arr_sum *= arr.pop(arr.index(max(arr)))
-    possible_max.append(arr_sum)
+        neg_prod *= arr2.pop(arr2.index(max(arr2)))
+    possible_max.append(neg_prod)
 
 print(max(possible_max))
